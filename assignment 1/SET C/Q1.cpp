@@ -13,9 +13,7 @@ int main() {
             cout << count;
             count++;
         }
-        cout << endl;
-      
+        cout << endl; 
     }
-
     return 0;
 }
