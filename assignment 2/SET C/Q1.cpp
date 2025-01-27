@@ -1,6 +1,7 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
+#include <limits>
 using namespace std;
 
 class Employee {
@@ -16,7 +17,7 @@ public:
     void acceptDetails() {
         cout << "Enter Employee Number: ";
         cin >> empNo;
-        cin.ignore();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Clear input buffer
         cout << "Enter Employee Name: ";
         getline(cin, name);
         cout << "Enter Basic Salary: ";
